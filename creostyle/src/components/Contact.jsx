@@ -1,6 +1,31 @@
+import { useState } from "react"
 import React from 'react'
 
 const Contact = () => {
+    const [contact, setContact] = useState({ name: "", email: "", phone: "", subject: "", message: "" })
+    const onchange = (e) => {
+        setContact({ ...contact, [e.target.name]: e.target.value });
+    };
+    const handlesubmit = async (e) => {
+        e.preventDefault();
+        const response = await fetch("http://localhost:5000/api/form/forms", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({name:contact.name,email:contact.email,phone:contact.phone,subject:contact.subject,message:contact.message}),
+        });
+        const data = await response.json();
+        console.log(data);
+
+        if (data) {
+            alert("Data submitted successfully");
+        } else {
+            alert("Please fill the form");
+        }
+
+    }
+
     return (
         <div style={{ marginTop: "100px" }}>
 
@@ -35,7 +60,7 @@ const Contact = () => {
                                         <div>
                                             <h4 className="mb-3">Address</h4>
                                             <address className="mb-0 text-secondary">
-                                                Lokhra,Near SouthPoint School, Guwahati, Assam, India
+                                                Lokhra,Guwahati, Assam, India
                                             </address>
                                         </div>
                                     </div>
@@ -61,7 +86,7 @@ const Contact = () => {
                                                             className="link-secondary text-decoration-none"
                                                             href="tel:+15057922430"
                                                         >
-                                                            +91 69966969696
+                                                             +91 97072 14486
                                                         </a>
                                                     </p>
                                                 </div>
@@ -89,7 +114,7 @@ const Contact = () => {
                                                             className="link-secondary text-decoration-none"
                                                             href="mailto:demo@yourdomain.com"
                                                         >
-                                                            creostyle@gmail.com
+                                                            creostyle.tech@gmail.com
                                                         </a>
                                                     </p>
                                                 </div>
@@ -127,7 +152,7 @@ const Contact = () => {
                         </div>
                         <div className="col-12 col-lg-6">
                             <div className="bg-white border rounded shadow-sm overflow-hidden">
-                                <form action="#!">
+                                <form onSubmit={handlesubmit}>
                                     <div className="row gy-4 gy-xl-5 p-4 p-xl-5">
                                         <div className="col-12">
                                             <label htmlFor="fullname" className="form-label">
@@ -136,10 +161,10 @@ const Contact = () => {
                                             <input
                                                 type="text"
                                                 className="form-control"
-                                                id="fullname"
-                                                name="fullname"
-                                                defaultValue=""
-                                                required=""
+                                                id="name"
+                                                name="name"
+                                                value={contact.name}
+                                                onChange={onchange}
                                             />
                                         </div>
                                         <div className="col-12 col-md-6">
@@ -164,8 +189,9 @@ const Contact = () => {
                                                     className="form-control"
                                                     id="email"
                                                     name="email"
-                                                    defaultValue=""
-                                                    required=""
+                                                    value={contact.email}
+                                                    
+                                                    onChange={onchange}
                                                 />
                                             </div>
                                         </div>
@@ -191,7 +217,8 @@ const Contact = () => {
                                                     className="form-control"
                                                     id="phone"
                                                     name="phone"
-                                                    defaultValue=""
+                                                    value={contact.phone}
+                                                    onChange={onchange}
                                                 />
                                             </div>
                                         </div>
@@ -204,8 +231,9 @@ const Contact = () => {
                                                 className="form-control"
                                                 id="subject"
                                                 name="subject"
-                                                defaultValue=""
-                                                required=""
+                                                value={contact.subject}
+                                                
+                                                onChange={onchange}
                                             />
                                         </div>
                                         <div className="col-12">
@@ -217,8 +245,9 @@ const Contact = () => {
                                                 id="message"
                                                 name="message"
                                                 rows={3}
-                                                required=""
-                                                defaultValue={""}
+                                                
+                                                value={contact.message}
+                                                onChange={onchange}
                                             />
                                         </div>
                                         <div className="col-12">

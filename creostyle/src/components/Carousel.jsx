@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Carousel = () => {
     return (
         <>
@@ -29,24 +30,24 @@ const Carousel = () => {
                     </div>
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img style={{ height: "550px", objectFit: "cover" }} src={'/images/nature.jpg'} className="w-100" alt="..." />
-                            <div className="carousel-caption text-dark d-flex flex-column justify-content-center align-items-center h-100">
+                            <img style={{ height: "550px", objectFit: "cover",filter:"brightness(70%)" }} src={'/images/Bg2.jpg'} className="w-100" alt="..." />
+                            <div className="carousel-caption text-dark d-flex flex-column justify-content-center align-items-center h-100 text-white">
                                 <h1 style={{ fontFamily: "Nunito Sans", letterSpacing: "3px" }}><strong>Welcome To Creostyle</strong></h1>
-                                <p>Some representative placeholder content for the first slide.</p>
+                                <p style={{fontSize:"25px",fontFamily:"Sorce Code Pro"}}>At Creostyle, we bring your ideas to life with bespoke web development solutions.</p>
                             </div>
                         </div>
                         <div className="carousel-item ">
-                            <img style={{ height: "550px", objectFit: "cover" }} src={'/images/nature.jpg'} className="w-100" alt="..." />
-                            <div className="carousel-caption text-dark d-flex flex-column justify-content-center align-items-center h-100  ">
-                                <h1 style={{ fontFamily: "Nunito Sans", letterSpacing: "3px" }}><strong>Welcome To Creostyle</strong></h1>
-                                <p>Some representative placeholder content for the second slide.</p>
+                            <img style={{ height: "550px", objectFit: "cover" }} src={'/images/Bg.jpg'} className="w-100" alt="..." />
+                            <div className="carousel-caption text-dark d-flex flex-column justify-content-center align-items-center h-100 text-white ">
+                                <h1 style={{ fontFamily: "Nunito Sans", letterSpacing: "3px" }}><strong>Crafting Stylish Digital Experiences</strong></h1>
+                                <p>Tailored websites that look stunning on every device</p>
                             </div>
                         </div>
                         <div className="carousel-item">
-                            <img style={{ height: "550px", objectFit: "cover" }} src={'/images/nature.jpg'} className="w-100" alt="..." />
-                            <div className="carousel-caption text-dark d-flex flex-column justify-content-center align-items-center h-100 ">
-                                <h1 style={{ fontFamily: "Nunito Sans", letterSpacing: "3px" }}><strong>Welcome To Creostyle</strong></h1>
-                                <p>Some representative placeholder content for the third slide.</p>
+                            <img style={{ height: "550px", objectFit: "cover",filter:"brightness(60%)" }} src={'/images/Bg1.jpg'} className="w-100" alt="..." />
+                            <div className="carousel-caption text-dark d-flex flex-column justify-content-center align-items-center h-100 text-white ">
+                                <h1 style={{ fontFamily: "Nunito Sans", letterSpacing: "3px" }}><strong>Scalable Hosting & SEO Optimization</strong></h1>
+                                <p>Fast, secure, and optimized for growth.</p>
                             </div>
                         </div>
                     </div>
@@ -77,15 +78,18 @@ const Carousel = () => {
                 backgroundColor: "rgba(255, 255, 255, 0.05)", // Transparent white background
                 backdropFilter: "blur(1px)", // Glass effect
                 borderRadius: "15px", // Rounded corners
-                padding: "20px", // Optional padding
-                boxShadow: "0 4px 50px rgba(0, 0, 0, 3)"
+                // padding: "20px", // Optional padding
+                boxShadow: "0 4px 50px rgba(0, 0, 0, 3)",
+                maxWidth:"90%"
+                
+                
             }} className="container">
-                <div className="row align-items-center">
-                    <div className="col-md-10 mx-auto col-xl-5 mb-4">
+                <div className="row align-items-center ">
+                    <div className=" col-md-10 mx-auto col-xl-5 mb-4">
                         <div className="lc-block">
                             <img
                                 className="img-fluid"
-                                src="https://images.unsplash.com/photo-1446229117710-2e5dd691ab55?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=M3wzNzg0fDB8MXxzZWFyY2h8MXx8Y2l0eSUyMGJ3fGVufDB8MHx8fDE3MDMwOTE5NDV8MA&ixlib=rb-4.0.3&q=80&w=1080&h=768"
+                                src={'./images/web development.webp'}
                                 srcSet=""
                                 sizes=""
                                 width=""
@@ -113,14 +117,11 @@ const Carousel = () => {
                                 <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
                             </svg>
                         </div>
-                        <div className="lc-block mb-3 me-lg-5">
+                        <div className="lc-block mb-3 me-lg-5 ">
                             <div editable="rich">
-                                <h1 style={{ color: "white" }} className="fw-bolder">Hello World!</h1>
+                                <h1 style={{ color: "white" }} className="fw-bolder">Web Development Expertise</h1>
                                 <p className="lead">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                                    tincidunt ac augue suscipit rhoncus. Donec ante erat, hendrerit sed
-                                    eleifend et, dapibus at leo. Mauris bibendum mi ut dui sagittis
-                                    volutpat.
+                                At Creostyle, we specialize in modern, innovative web development that meets the unique needs of each client. Whether it’s e-commerce, content management, or custom development, we build scalable and secure websites.
                                 </p>
                             </div>
                         </div>
@@ -129,14 +130,15 @@ const Carousel = () => {
                 </div>
             </div>
 
-
+            <hr style={{ position: "relative", top: "80px" }} className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"></hr>
             <div style={{
                 marginTop: "200px",
                 backgroundColor: "rgba(255, 255, 255, 0.05)", // Transparent white background
                 backdropFilter: "blur(1px)", // Glass effect
                 borderRadius: "15px", // Rounded corners
                 padding: "20px", // Optional padding
-                boxShadow: "0 4px 50px rgba(0, 0, 0, 3)"
+                boxShadow: "0 4px 50px rgba(0, 0, 0, 3)",
+                maxWidth:"90%"
             }} className="container">
                 <div className="row align-items-center">
                     <div className="col-12 col-xl-5 mx-auto" style={{ color: "white" }}>
@@ -158,12 +160,9 @@ const Carousel = () => {
                         </div>
                         <div className="lc-block mb-3 me-lg-5">
                             <div editable="rich">
-                                <h1 style={{ color: "white" }} className="fw-bolder">Hello World!</h1>
+                                <h1 style={{ color: "white" }} className="fw-bolder">Custom Web Design</h1>
                                 <p className="lead">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                                    tincidunt ac augue suscipit rhoncus. Donec ante erat, hendrerit sed
-                                    eleifend et, dapibus at leo. Mauris bibendum mi ut dui sagittis
-                                    volutpat.
+                                Our custom web design services offer tailored, visually striking websites that represent your brand identity. We focus on intuitive designs that not only attract visitors but also engage them.
                                 </p>
                             </div>
                         </div>
@@ -173,7 +172,7 @@ const Carousel = () => {
                         <div className="lc-block">
                             <img
                                 className="img-fluid"
-                                src="https://images.unsplash.com/photo-1446229117710-2e5dd691ab55?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=M3wzNzg0fDB8MXxzZWFyY2h8MXx8Y2l0eSUyMGJ3fGVufDB8MHx8fDE3MDMwOTE5NDV8MA&ixlib=rb-4.0.3&q=80&w=1080&h=768"
+                                src={'./images/custom design.png'}
                                 srcSet=""
                                 sizes=""
                                 width=""
@@ -186,20 +185,22 @@ const Carousel = () => {
                     </div>
                 </div>
             </div>
+            <hr style={{ position: "relative", top: "80px" }} className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"></hr>
             <div style={{
                 marginTop: "200px",
                 backgroundColor: "rgba(255, 255, 255, 0.05)", // Transparent white background
                 backdropFilter: "blur(1px)", // Glass effect
                 borderRadius: "15px", // Rounded corners
                 padding: "20px", // Optional padding
-                boxShadow: "0 4px 50px rgba(0, 0, 0, 3)"
+                boxShadow: "0 4px 50px rgba(0, 0, 0, 3)",
+                maxWidth:"90%"
             }} className="container">
                 <div className="row align-items-center">
                     <div className="col-md-10 mx-auto col-xl-5 mb-4">
                         <div className="lc-block">
                             <img
                                 className="img-fluid"
-                                src="https://images.unsplash.com/photo-1446229117710-2e5dd691ab55?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=M3wzNzg0fDB8MXxzZWFyY2h8MXx8Y2l0eSUyMGJ3fGVufDB8MHx8fDE3MDMwOTE5NDV8MA&ixlib=rb-4.0.3&q=80&w=1080&h=768"
+                                src={'./images/se0.webp'}
                                 srcSet=""
                                 sizes=""
                                 width=""
@@ -229,12 +230,9 @@ const Carousel = () => {
                         </div>
                         <div className="lc-block mb-3 me-lg-5">
                             <div editable="rich">
-                                <h1 style={{ color: "white" }} className="fw-bolder">Hello World!</h1>
+                                <h1 style={{ color: "white" }} className="fw-bolder">24/7 Support & SEO Solutions</h1>
                                 <p className="lead">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                                    tincidunt ac augue suscipit rhoncus. Donec ante erat, hendrerit sed
-                                    eleifend et, dapibus at leo. Mauris bibendum mi ut dui sagittis
-                                    volutpat.
+                                With our scalable hosting solutions and 24/7 technical support, your website is always up and running smoothly. We also implement SEO optimization strategies to drive organic traffic and improve your search engine rankings.
                                 </p>
                             </div>
                         </div>
@@ -242,6 +240,7 @@ const Carousel = () => {
                     </div>
                 </div>
             </div>
+            
         </>
     )
 }

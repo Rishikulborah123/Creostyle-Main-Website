@@ -1,13 +1,14 @@
 import React from 'react'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const About = () => {
     return (
-        <div style={{marginTop:"100px"}}>
+        <div style={{ marginTop: "100px" }}>
             <section className="py-3 py-md-5 py-xl-8">
                 <div style={{ color: "white" }} className="container">
                     <div className="row justify-content-md-center">
                         <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                            <h2 className="mb-4 display-5 text-center">About Us</h2>
+                            <h2 className="mb-4 display-5 text-center">About Creostyle</h2>
                             <p style={{ color: "rgb(129 135 141)" }} className="text-secondary mb-5 text-center lead fs-4">
                                 We believe in the power of teamwork and collaboration. Our diverse
                                 experts work tirelessly to deliver innovative solutions tailored to
@@ -24,74 +25,19 @@ const About = () => {
                                 <div className="col-12 col-lg-11">
                                     <div className="about-wrapper">
                                         <p className="lead mb-4 mb-md-5 text-white">
-                                            As a socially responsible entity, we are deeply committed to
-                                            positively impacting the communities we serve and the world at
-                                            large. Through various initiatives and partnerships, we actively
-                                            contribute to environmental sustainability, social welfare, and
-                                            educational advancement.
+                                            At Creostyle, we believe in crafting stylish digital experiences that make an impact. With years of experience in web development, web hosting, and design, our team is dedicated to delivering high-quality, tailored solutions that meet your unique business needs. Whether you're a startup or an established enterprise, our mission is to bring your vision to life with creativity, technical expertise, and seamless user experiences. We prioritize innovation, responsiveness, and support, ensuring that every project reflects our commitment to excellence.
                                         </p>
-                                        <div className="row gy-4 mb-4 mb-md-5">
-                                            <div className="col-12 col-md-6">
-                                                <div style={{
-                                                    borderRadius: "15px",
-                                                    boxShadow: "0 4px 50px rgba(0, 0, 0, 10)"
-                                                }} className="card border border-dark">
-                                                    <div className="card-body p-4">
-                                                        <h3 className="display-5 fw-bold text-primary text-center mb-2">
-                                                            370+
-                                                        </h3>
-                                                        <p className="fw-bold text-center m-0">
-                                                            Qualified Experts
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-12 col-md-6">
-                                                <div style={{
-                                                    borderRadius: "15px",
-                                                    boxShadow: "0 4px 50px rgba(0, 0, 0, 3)"
-                                                }} className="card border border-dark">
-                                                    <div className="card-body p-4">
-                                                        <h3 className="display-5 fw-bold text-primary text-center mb-2">
-                                                            18k+
-                                                        </h3>
-                                                        <p className="fw-bold text-center m-0">
-                                                            Satisfied Clients
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a href="#!" className="btn btn-primary bsb-btn-2xl">
-                                            Explore
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width={20}
-                                                height={20}
-                                                fill="currentColor"
-                                                className="bi bi-arrow-right-short"
-                                                viewBox="0 0 16 16"
-                                            >
-                                                <path
-                                                    fillRule="evenodd"
-                                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
-                                                />
-                                            </svg>
-                                        </a>
+
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-12 col-lg-6 ">
-                            <img
-                                className="img-fluid rounded border border-dark"
-                                style={{
-                                    borderRadius: "15px",
-                                    boxShadow: "0 4px 50px rgba(0, 0, 0, 3)"
-                                }}
-                                loading="lazy"
-                                src="./images/technology1.jpg"
-                                alt="About Us"
+                            <DotLottieReact
+                                src="https://lottie.host/4c44e9ad-e10b-4609-b936-d1de48cba6bb/lYxoxZAfQA.lottie"
+                                loop
+                                autoplay
                             />
                         </div>
                     </div>
@@ -115,14 +61,19 @@ const About = () => {
                 <div className="container">
                     <div className="row gy-4 gy-lg-0 align-items-lg-center">
                         <div className="col-12 col-lg-6">
-                            <img style={{
+                            {/* <img style={{
                                 borderRadius: "15px",
                                 boxShadow: "0 4px 50px rgba(0, 0, 0, 3)"
                             }}
                                 className="img-fluid rounded border border-dark"
                                 loading="lazy"
-                                src="./images/team work.jpg"
+                                src="./images/grp photo2.jpg"
                                 alt="About 6"
+                            /> */}
+                            <DotLottieReact
+                                src="https://lottie.host/c0cefbe6-dd26-452e-b305-4d2261376f8f/uoNSKcLtrX.lottie"
+                                loop
+                                autoplay
                             />
                         </div>
                         <div className="col-12 col-lg-6">
@@ -145,7 +96,7 @@ const About = () => {
                                                     aria-expanded="true"
                                                     aria-controls="collapseOne"
                                                 >
-                                                    Low Price Guarantee
+                                                    Founded with a passion for creativity and innovation
                                                 </button>
                                             </h2>
                                             <div
@@ -155,10 +106,7 @@ const About = () => {
                                                 data-bs-parent="#accordionAbout6"
                                             >
                                                 <div className="accordion-body text-white">
-                                                    Our Low Price Guarantee isn't just a promise; it's a
-                                                    commitment to providing you with unbeatable value and peace
-                                                    of mind when you shop with us. Trust us to deliver quality
-                                                    products and services without breaking the bank.
+                                                    Creostyle was built on the idea that digital solutions should be both functional and visually compelling. Our team continuously explores new trends and technologies to stay ahead of the curve.
                                                 </div>
                                             </div>
                                         </div>
@@ -178,7 +126,7 @@ const About = () => {
                                                     aria-expanded="false"
                                                     aria-controls="collapseTwo"
                                                 >
-                                                    Life-Time Warranty
+                                                    Focus on customer satisfaction and long-term support
                                                 </button>
                                             </h2>
                                             <div
@@ -188,9 +136,7 @@ const About = () => {
                                                 data-bs-parent="#accordionAbout6"
                                             >
                                                 <div className="accordion-body text-white">
-                                                    Discover unparalleled peace of mind with our business's
-                                                    lifetime warranty commitment. We stand behind the quality
-                                                    and durability of our products like no other.
+                                                    We don’t just build websites—we build lasting relationships. From project inception to post-launch support, we ensure smooth operations and timely updates to keep your digital presence strong.
                                                 </div>
                                             </div>
                                         </div>
@@ -209,7 +155,7 @@ const About = () => {
                                                     aria-expanded="false"
                                                     aria-controls="collapseThree"
                                                 >
-                                                    Genuine Spare Parts
+                                                    Dedicated team of developers, designers, and support staff
                                                 </button>
                                             </h2>
                                             <div
@@ -219,11 +165,7 @@ const About = () => {
                                                 data-bs-parent="#accordionAbout6"
                                             >
                                                 <div className="accordion-body text-white">
-                                                    Our commitment to authenticity ensures that you receive
-                                                    parts manufactured to the highest standards, guaranteeing
-                                                    optimal performance and longevity for your equipment. From
-                                                    small components to intricate pieces, we have everything you
-                                                    need to keep your machinery running smoothly.
+                                                    Our experienced professionals collaborate closely with clients, combining technical expertise with creative insights to deliver exceptional results. Whether it’s designing a sleek UI, ensuring fast and secure hosting, or troubleshooting issues, we are here to support your growth.
                                                 </div>
                                             </div>
                                         </div>
