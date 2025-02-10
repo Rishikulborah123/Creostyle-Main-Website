@@ -1,11 +1,19 @@
 import React from 'react'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Carousel = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,  // Animation duration (in ms)
+            once: true,  // Animation happens only once
+        });
+    }, []);
     return (
         <>
             <div style={{marginTop:"100px"}}>
-                <div style={{ height: "480px", backgroundColor: "#022935", color: "white" }} id="carouselExampleCaptions" className="carousel slide active">
+                <div data-aos="fade-up" data-aos-delay="300" style={{ height: "480px", backgroundColor: "#022935", color: "white" }} id="carouselExampleCaptions" className="carousel slide active">
                     <div className="carousel-indicators">
                         <button
                             type="button"
@@ -31,7 +39,7 @@ const Carousel = () => {
                     <div className="carousel-inner">
                         <div className="carousel-item active">
                             <img style={{ height: "550px", objectFit: "cover",filter:"brightness(70%)" }} src={'/images/Bg2.jpg'} className="w-100" alt="..." />
-                            <div className="carousel-caption text-dark d-flex flex-column justify-content-center align-items-center h-100 text-white">
+                            <div data-aos="fade-up" data-aos-delay="300" className="carousel-caption text-dark d-flex flex-column justify-content-center align-items-center h-100 text-white">
                                 <h1 style={{ fontFamily: "Nunito Sans", letterSpacing: "3px" }}><strong>Welcome To Creostyle</strong></h1>
                                 <p style={{fontSize:"25px",fontFamily:"Sorce Code Pro"}}>At Creostyle, we bring your ideas to life with bespoke web development solutions.</p>
                             </div>
@@ -73,7 +81,7 @@ const Carousel = () => {
 
             </div>
             <hr style={{position:"relative",top:"120px"}} class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"></hr>
-            <div style={{
+            <div data-aos="fade-left" data-aos-delay="400" style={{
                 marginTop: "200px",
                 backgroundColor: "rgba(255, 255, 255, 0.05)", // Transparent white background
                 backdropFilter: "blur(1px)", // Glass effect
@@ -131,7 +139,7 @@ const Carousel = () => {
             </div>
 
             <hr style={{ position: "relative", top: "80px" }} className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"></hr>
-            <div style={{
+            <div data-aos="fade-right" data-aos-delay="400" style={{
                 marginTop: "200px",
                 backgroundColor: "rgba(255, 255, 255, 0.05)", // Transparent white background
                 backdropFilter: "blur(1px)", // Glass effect
@@ -186,7 +194,7 @@ const Carousel = () => {
                 </div>
             </div>
             <hr style={{ position: "relative", top: "80px" }} className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"></hr>
-            <div style={{
+            <div data-aos="fade-up" data-aos-delay="400" style={{
                 marginTop: "200px",
                 backgroundColor: "rgba(255, 255, 255, 0.05)", // Transparent white background
                 backdropFilter: "blur(1px)", // Glass effect

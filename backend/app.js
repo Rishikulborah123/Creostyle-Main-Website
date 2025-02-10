@@ -10,5 +10,5 @@ app.use(express.json());
 app.use('/api/form', require('./routes/form'));
 
 app.listen(port, () => {
-  console.log(`Server listening at port http://localhost:${port}`)
+  console.log(`Server listening at port http://:${port}`)
 })
